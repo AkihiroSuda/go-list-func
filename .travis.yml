@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - 1.7
+
+script:
+  - go fmt ./...
+  - go vet ./...
+  - go test -race -v ./...
