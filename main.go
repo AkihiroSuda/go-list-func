@@ -117,6 +117,8 @@ func formatType(typ ast.Expr) string {
 	case *ast.ChanType:
 		// FIXME
 		panic(fmt.Errorf("unsupported chan type %#v", t))
+	case *ast.BasicLit:
+		return t.Value
 	default:
 		panic(fmt.Errorf("unsupported type %#v", t))
 	}
